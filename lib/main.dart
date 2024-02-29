@@ -3,19 +3,21 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
-  MaterialApp(
-    home: new BallPage(),
+  const MaterialApp(
+    home: BallPage(),
   ),
 );
 
 class BallPage extends StatelessWidget {
+  const BallPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue,
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
-        title: Text(
+        title: const Text(
             'Magic Balls',
         style: TextStyle(
           fontFamily: 'Courgette',
@@ -23,12 +25,15 @@ class BallPage extends StatelessWidget {
         ),),
         centerTitle: true,
       ),
-      body: Ball(),
+      body: const Ball(),
     );
   }
 }
 
 class Ball extends StatefulWidget{
+  const Ball({super.key});
+
+  @override
   _BallState createState() => _BallState();
 }
 
